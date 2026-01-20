@@ -22,8 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 // Connect to MongoDB
 await connectDB();
 
-// Middleware
-app.use(cors({
+const corsOptions = {
   origin: [
     "https://hackx-frontend.vercel.app",
     "https://hack-x-india-hackathon-2026-nu.vercel.app",
@@ -32,10 +31,13 @@ app.use(cors({
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
-}));
+};
+
+// Middleware
+app.use(cors(corsOptions));
 
 // IMPORTANT: handle preflight
-app.options("*", cors());
+app.options("*", cors(corsOptions));
 
 
 // Routes
