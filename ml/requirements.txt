@@ -9,3 +9,5 @@ joblib
 xgboost
 lightgbm
 catboost
+uvicorn
+fastapi
