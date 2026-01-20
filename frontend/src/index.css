@@ -5,11 +5,12 @@
 /* Global styles */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc; /* Slate 50 */
 }
 
 code {
@@ -24,14 +25,54 @@ code {
   }
   
   .card {
-    @apply bg-white rounded-lg shadow-md p-6;
+    @apply bg-white rounded-lg shadow-sm border border-gray-100 p-6 transition-shadow hover:shadow-md;
   }
   
   .btn-primary {
-    @apply bg-primary-600 text-white px-4 py-2 rounded-md hover:bg-primary-700 transition-colors;
+    @apply bg-primary-600 text-white px-4 py-2 rounded-md hover:bg-primary-700 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
   }
   
   .btn-secondary {
-    @apply bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors;
+    @apply bg-white text-gray-700 border border-gray-300 px-4 py-2 rounded-md hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
   }
+
+  .btn-danger {
+    @apply bg-risk-600 text-white px-4 py-2 rounded-md hover:bg-risk-700 transition-colors focus:outline-none focus:ring-2 focus:ring-risk-500 focus:ring-offset-2;
+  }
+
+  .badge {
+     @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-success {
+      @apply bg-primary-100 text-primary-800;
+  }
+
+  .badge-warning {
+      @apply bg-warning-100 text-warning-800;
+  }
+
+  .badge-danger {
+      @apply bg-risk-100 text-risk-800;
+  }
+}
+
+/* Animations */
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
 }
