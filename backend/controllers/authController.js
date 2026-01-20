@@ -23,15 +23,11 @@ export const registerUser = async (req, res) => {
       return res.status(400).json({ message: 'User already exists' });
     }
 
-    // Determine role based on email superuser check
-    const isSuperUser = email === 'ashishbiradar.1911@gmail.com';
-    const assignedRole = isSuperUser ? 'admin' : 'user';
-
     const user = await User.create({
       name,
       email,
       password,
-      role: assignedRole
+      role: role || 'user'
     });
 
     if (user) {
