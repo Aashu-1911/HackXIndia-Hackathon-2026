@@ -165,49 +165,7 @@ function Dashboard() {
           </div>
         </div>
 
-        {/* Server Status Card */}
-        <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 mb-8 hover:shadow-xl transition-shadow duration-300">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-            <span className="text-2xl">🔌</span>
-            Server Status
-          </h2>
 
-          {loading && (
-            <div className="flex items-center text-gray-600">
-              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-primary-600 mr-3"></div>
-              Checking server connection...
-            </div>
-          )}
-
-          {error && (
-            <div className="bg-gradient-to-r from-risk-50 to-warning-50 border-l-4 border-risk-500 text-risk-700 px-4 py-3 rounded-lg">
-              <p className="font-medium flex items-center gap-2">
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                </svg>
-                Connection Error
-              </p>
-              <p className="text-sm mt-1">{error}</p>
-            </div>
-          )}
-
-          {serverStatus && !loading && (
-            <div className="flex flex-wrap gap-4 text-sm">
-              <div className="flex items-center bg-success-50 px-4 py-2 rounded-lg border border-success-200">
-                <span className="inline-block w-3 h-3 bg-success-500 rounded-full mr-2 animate-pulse"></span>
-                <span className="text-gray-700">
-                  <strong className="text-success-700">Status:</strong> {serverStatus.status}
-                </span>
-              </div>
-              <div className="text-gray-700 bg-primary-50 px-4 py-2 rounded-lg border border-primary-200">
-                <strong className="text-primary-700">Env:</strong> {serverStatus.environment}
-              </div>
-              <div className="text-gray-700 bg-analytics-50 px-4 py-2 rounded-lg border border-analytics-200">
-                <strong className="text-analytics-700">DB:</strong> {serverStatus.database}
-              </div>
-            </div>
-          )}
-        </div>
 
       {/* KPI Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -301,51 +259,7 @@ function Dashboard() {
         <InsightsPanel selectedArea={selectedArea} />
       </div>
 
-      {/* Info Section */}
-      <div className="bg-gradient-to-br from-primary-50 to-success-50 rounded-xl shadow-lg border border-primary-200 p-6 hover:shadow-xl transition-shadow duration-300">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-          <span className="text-2xl">✨</span>
-          Phase 1-5 Complete
-        </h2>
-        <div className="grid md:grid-cols-2 gap-4">
-          <ul className="space-y-2 text-gray-700">
-            <li className="flex items-start">
-              <span className="text-success-600 mr-2 text-lg">✓</span>
-              <span>Backend API server with Express & MongoDB</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-success-600 mr-2 text-lg">✓</span>
-              <span>Database models for Health, Sanitation, and Environment</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-success-600 mr-2 text-lg">✓</span>
-              <span>React frontend with Vite and Tailwind CSS</span>
-            </li>
-          </ul>
-          <ul className="space-y-2 text-gray-700">
-            <li className="flex items-start">
-              <span className="text-success-600 mr-2 text-lg">✓</span>
-              <span>REST APIs with area-wise risk assessment</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-success-600 mr-2 text-lg">✓</span>
-              <span>Interactive Leaflet map with risk visualization</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-success-600 mr-2 text-lg">✓</span>
-              <span>KPI cards, trend charts, and intelligent insights</span>
-            </li>
-          </ul>
-        </div>
-        <div className="mt-6 pt-4 border-t border-primary-300">
-          <p className="text-sm text-gray-600 flex items-center gap-2">
-            <svg className="h-4 w-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-            </svg>
-            Click <strong className="text-primary-700">Map View</strong> in the navigation to see the interactive risk map.
-          </p>
-        </div>
-      </div>
+
     </div>
     </div>
   );
