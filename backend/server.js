@@ -26,6 +26,7 @@ await connectDB();
 app.use(cors({
   origin: [
     "https://hackx-frontend.vercel.app",
+    "https://hack-x-india-hackathon-2026-nu.vercel.app",
     "http://localhost:5173"
   ],
   credentials: true,
