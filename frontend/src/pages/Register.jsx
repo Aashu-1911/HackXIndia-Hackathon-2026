@@ -56,9 +56,7 @@ const Register = () => {
         {/* Logo and Header */}
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
-            <div className="bg-white p-4 rounded-2xl shadow-health">
-              <span className="text-5xl" role="img" aria-label="Health">🏥</span>
-            </div>
+             <img src="/logo.png" alt="Logo" className="h-24 w-auto object-contain" />
           </div>
           <h2 className="text-4xl font-extrabold text-gray-900 mb-2">
             Join HackX

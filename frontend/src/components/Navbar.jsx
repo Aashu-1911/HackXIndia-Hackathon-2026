@@ -25,17 +25,11 @@ function Navbar() {
   return (
     <nav className="bg-gradient-to-r from-primary-700 via-primary-600 to-primary-700 shadow-xl border-b border-primary-500">
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo/Brand */}
           <div className="flex items-center">
             <Link to={user?.role === 'admin' ? "/" : "/map"} className="flex items-center gap-3 group">
-              <div className="bg-white p-2 rounded-xl shadow-health group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                <span className="text-2xl" role="img" aria-label="Hospital">🏥</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-white text-2xl font-bold tracking-tight">HackX</span>
-                <span className="text-primary-200 text-xs font-medium">Health Monitoring</span>
-              </div>
+              <img src="/logo.png" alt="Logo" className="h-16 w-auto object-contain group-hover:scale-105 transition-all duration-300" />
               <span className="ml-2 px-2.5 py-1 rounded-lg text-xs font-bold bg-white/20 text-white border border-white/30 backdrop-blur-sm">
                 {user?.role === 'admin' ? 'Dashboard' : 'Map'}
               </span>
