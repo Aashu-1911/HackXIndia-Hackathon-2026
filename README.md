@@ -4,7 +4,7 @@
 ### Project Title: AI-Driven Public Health & Urban Risk Dashboard
 
 ### 🎥 Demo Video
-👉 [Watch the Demo](https://drive.google.com/file/d/1syCuBW67B31jW2XAXT-17RKAo2OBHgTE/view?usp=sharing)
+👉 [Watch the Demo](https://drive.google.com/file/d/1n-cw1LkdeD85SNXbAoseyAnKgJ_MeZuT/view?usp=sharing)
 
 
 ## HealthPulse
