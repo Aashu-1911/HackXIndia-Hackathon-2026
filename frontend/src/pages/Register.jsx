@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
+import logo from '../assets/logo.png';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -56,7 +57,7 @@ const Register = () => {
         {/* Logo and Header */}
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
-             <img src="/logo.png" alt="Logo" className="h-24 w-auto object-contain" />
+             <img src={logo} alt="HackX Logo" className="h-24 w-auto object-contain" />
           </div>
           <h2 className="text-4xl font-extrabold text-gray-900 mb-2">
             Join HackX

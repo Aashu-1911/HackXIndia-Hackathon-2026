@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import AuthContext from '../context/AuthContext';
+import logo from '../assets/logo.png';
 
 /**
  * Navigation Bar Component
@@ -29,7 +30,7 @@ function Navbar() {
           {/* Logo/Brand */}
           <div className="flex items-center">
             <Link to={user?.role === 'admin' ? "/" : "/map"} className="flex items-center gap-3 group">
-              <img src="/logo.png" alt="Logo" className="h-16 w-auto object-contain group-hover:scale-105 transition-all duration-300" />
+              <img src={logo} alt="HackX Logo" className="h-16 w-auto object-contain group-hover:scale-105 transition-all duration-300" />
               <span className="ml-2 px-2.5 py-1 rounded-lg text-xs font-bold bg-white/20 text-white border border-white/30 backdrop-blur-sm">
                 {user?.role === 'admin' ? 'Dashboard' : 'Map'}
               </span>
